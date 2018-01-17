@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<Orders>
+<Order><account>AX001</account><submittedAt>1507060723641</submittedAt><receivedAt>1507060723642</receivedAt><market>VOD1.L</market><action>BUY</action><size>100</size></Order>
+<Order><account>AX002</account><submittedAt>1507060723651</submittedAt><receivedAt>1507060723652</receivedAt><market>VOD2.L</market><action>SELL</action><size>200</size></Order>
+</Orders>

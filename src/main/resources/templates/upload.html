@@ -1,0 +1,23 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<div th:if="${message}">
+    <h2 th:text="${message}"/>
+</div>
+
+<div>
+    <form method="POST" enctype="multipart/form-data" action="/">
+        <table>
+            <tr><td>File to upload:</td><td><input type="file" name="file" /></td></tr>
+            <tr><td>URL:</td><td><input type="text" name="url" /></td></tr>
+            <tr><td>Username:</td><td><input type="text" name="username" /></td></tr>
+            <tr><td>Password:</td><td><input type="text" name="password" /></td></tr>
+            <tr><td>Name:</td><td><input type="text" name="name" /></td></tr>
+            <tr><td>Type:</td><td>Queue<input type="radio" name="type" value="queue" />Topic<input type="radio" name="type" value="topic" /></td></tr>
+            <tr><td></td><td><input type="submit" value="Upload" /></td></tr>
+        </table>
+    </form>
+</div>
+
+</body>
+</html>
