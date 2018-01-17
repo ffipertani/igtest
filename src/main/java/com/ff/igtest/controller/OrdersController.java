@@ -44,7 +44,7 @@ public class OrdersController {
                                      String name,
                                      String type) {
         try {
-            TransportInfo transportInfo = new TransportInfo(username, password, url, name, "queue".equals(type), "producer", true);
+            TransportInfo transportInfo = new TransportInfo(username, password, url, name, "queue".equals(type), "producer");
             List<Order> orders = orderFactory.createOrders(file);
             LOG.debug("Sending {} order to {}", orders.size(), transportInfo.getName());
             orderService.send(transportInfo, orders);

@@ -37,7 +37,7 @@ public class MessageProducerFactoryTest {
     private MessageProducerFactory transportFactory;
 
     private static TransportInfo createTransportInfo(boolean queue) {
-        return new TransportInfo("username", "password", "url", "name", queue, "clientID",true);
+        return new TransportInfo("username", "password", "url", "name", queue, "clientID");
     }
 
     @Test

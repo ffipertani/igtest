@@ -50,7 +50,7 @@ public class TransportFactoryTest {
 
 
     private static TransportInfo createTransportInfo(boolean queue) {
-        return new TransportInfo("username", "password", "url", "name", queue, "clientId", true);
+        return new TransportInfo("username", "password", "url", "name", queue, "clientId");
     }
 
 }

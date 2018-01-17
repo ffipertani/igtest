@@ -9,14 +9,13 @@ public class TransportInfo {
     private String clientId;
     private boolean producer;
 
-    public TransportInfo(String username, String password, String url, String name, boolean queue, String clientId, boolean producer){
+    public TransportInfo(String username, String password, String url, String name, boolean queue, String clientId){
         this.username = username;
         this.password = password;
         this.url = url;
         this.name = name;
         this.queue = queue;
         this.clientId = clientId;
-        this.producer = producer;
     }
 
     public String getUsername() {
@@ -43,7 +42,4 @@ public class TransportInfo {
         return clientId;
     }
 
-    public boolean isProducer() {
-        return producer;
-    }
 }

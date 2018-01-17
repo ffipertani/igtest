@@ -2,10 +2,10 @@ package integration;
 
 import com.ff.igtest.Application;
 import com.ff.igtest.exception.OrderException;
-import com.ff.igtest.transport.MessageReceiver;
-import com.ff.igtest.transport.factory.TransportFactory;
 import com.ff.igtest.model.Order;
+import com.ff.igtest.transport.MessageReceiver;
 import com.ff.igtest.transport.TransportInfo;
+import com.ff.igtest.transport.factory.TransportFactory;
 import org.apache.activemq.broker.BrokerService;
 import org.junit.After;
 import org.junit.Before;
@@ -32,7 +32,6 @@ public class SendOrderIntegrationTest {
     private static String USERNAME = "";
     private static String PASSWORD = "";
     private static String CLIENT_ID = "consumer";
-    private static boolean IS_PRODUCER = false;
 
     private BrokerService broker;
 
@@ -62,7 +61,7 @@ public class SendOrderIntegrationTest {
 
         sendRestRequest(name, queue);
         //No need to register the consumer before sending messages
-        TransportInfo transportInfo = new TransportInfo(USERNAME, PASSWORD, BROKER_URL, name, queue, CLIENT_ID, IS_PRODUCER);
+        TransportInfo transportInfo = new TransportInfo(USERNAME, PASSWORD, BROKER_URL, name, queue, CLIENT_ID);
         MessageReceiver<Order> transport = transportFactory.createMessageReceiver(transportInfo);
         transport.start();
 
@@ -74,7 +73,7 @@ public class SendOrderIntegrationTest {
         boolean queue = false;
         String name = "testTopic";
 
-        TransportInfo transportInfo = new TransportInfo(USERNAME, PASSWORD, BROKER_URL, name, queue, CLIENT_ID, IS_PRODUCER);
+        TransportInfo transportInfo = new TransportInfo(USERNAME, PASSWORD, BROKER_URL, name, queue, CLIENT_ID);
         MessageReceiver<Order> transport = transportFactory.createMessageReceiver(transportInfo);
 
         //Register the durable subscriber before sending messages
