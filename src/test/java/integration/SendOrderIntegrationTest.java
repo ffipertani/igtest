@@ -32,6 +32,7 @@ public class SendOrderIntegrationTest {
     private static String USERNAME = "";
     private static String PASSWORD = "";
     private static String CLIENT_ID = "consumer";
+    private static int EXPECTED_ORDERS = 2;
 
     private BrokerService broker;
 
@@ -103,7 +104,7 @@ public class SendOrderIntegrationTest {
 
 
     private void receiveMessages(MessageReceiver<Order> receiver) throws OrderException {
-        int expectedOrders = 2;
+        int expectedOrders = EXPECTED_ORDERS;
         while (expectedOrders > 0) {
             Order order = receiver.receive();
             System.out.print(order);

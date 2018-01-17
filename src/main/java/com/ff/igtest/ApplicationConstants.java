@@ -4,6 +4,8 @@ public class ApplicationConstants {
     public static final String SUBSCRIBER_NAME = "test";
 
     public static final String HOME = "upload";
+    public static final String QUEUE = "queue";
+    public static final String PRODUCER_CLIENTID = "producer";
 
     public static final String ACCOUNT_TAG = "account";
     public static final String SUBMITTEDAT_TAG = "submittedAt";
